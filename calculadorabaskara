@@ -1,3 +1,4 @@
+//Classmain
 import java.util.Scanner;
 
 import baskara.Formulas;
@@ -33,3 +34,27 @@ public class Baskara {
     }
 
 }
+
+//Class Formulas
+package baskara;
+public class Formulas {
+    public double a;
+    public double b;
+    public double c;
+    
+    public double delta(){
+         if((Math.pow(b, 2.0) - 4.0 * a * c)<0){
+            System.out.println("Esta equação não possui raízes reais!");
+         }
+            return Math.pow(b, 2.0) - 4.0 * a * c;
+      }
+
+      public double xi() {
+         return ((-b) + Math.sqrt(delta())) / (2.0 * a);
+         }
+
+      public double xii() {
+         return ((-b) - Math.sqrt(delta())) / (2.0 * a);
+         }
+ 
+} 
