@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+import baskara.Formulas;
+
+public class Baskara {
+
+    public static void main(String[] args) {
+
+        Scanner t = new Scanner(System.in);
+        
+        Formulas bkr = new Formulas();
+        
+            
+        System.out.println("Insira os valores de A, B e C: ");
+        bkr.a = t.nextDouble();
+        bkr.b = t.nextDouble();
+        bkr.c = t.nextDouble();
+        
+            double bkrDeltaNeg = bkr.delta();
+            if(bkrDeltaNeg<0){
+               //System.out.println("Esta equação não possui raízes reais!");
+            }else{
+        double bkrxi = bkr.xi();
+        double bkrxii = bkr.xii();
+        
+        System.out.println("Valor de X'1 = " + bkrxi);
+        System.out.println("Valor de X'2 = " + bkrxii);
+            }
+        
+        
+        t.close();
+
+    }
+
+}
